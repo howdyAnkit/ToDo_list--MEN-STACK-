@@ -11,10 +11,15 @@
         <li>Buy food</li>
         <li>cook the food</li>
         <li>eat the food</li>
-        <form class="" action="/" method="POST">
-            <input type="text" name="newItem" placeholder="add new to do list">
-            <button type="submit" name="button"></button>
-        </form>
+        
+        <% for(let i=0; i < newItem.length; i++){ %>
+            <li> <%= newItem[i]  %> </li>
+        <% } %> 
+
     </ul>
+    <form class="" action="/" method="POST">
+        <input type="text" name="newItem">
+        <button type="submit" name="button">Add</button>
+    </form>
 </body>
 </html>
