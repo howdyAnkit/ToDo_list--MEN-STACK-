@@ -2,11 +2,12 @@
 
 const express = require("express");
 const bodyParser = require("body-parser");
+const { static } = require("express");
 const app = express();
 const items = [];
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
-
+app.use(express.static('public'));
 app.get('/', (req,res) => {
     var today = new Date();
 
