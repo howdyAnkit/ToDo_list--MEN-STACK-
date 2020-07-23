@@ -8,20 +8,21 @@
 </head>
 <body>
     <div class="box" id="heading">
-        <h1> <%= kindof %></h1>
+        <h1> <%= listTitle %></h1>
     </div>
 
     <div class="box">
-         <% for(let i=0; i < newItem.length; i++){ %>
+         <% for(let i=0; i < newListems.length; i++){ %>
             <div class="item">
                 <input type="checkbox">
-                <p><%= newItem[i]  %></p>
+                <p><%= newListems[i] %></p>
             </div>
          <% } %>
+         
 
-        <form class="" action="/" method="POST">
-            <input type="text" name="newItem" placeholder="add item" autocomplete="off">
-            <button type="submit" name="button">+</button>
+        <form class="item" action="/" method="POST">
+            <input type="text" name="newListems" placeholder="add item" autocomplete="off">
+            <button type="submit" name="list" value=<%= listTitle %>>+</button>
         </form>
     </div>
 
